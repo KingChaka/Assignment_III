@@ -5,6 +5,7 @@
 *           of the tree ADT.
 *
 ************************************************* */
+#define INITIAL_HT -1
 
 #ifndef TREENODE_H
 #define TREENODE_H
@@ -40,20 +41,34 @@ class Tree : public TreeNode<T> {
 
     public:
         // CONSTRUCTORS and DESTRUCTOR
-        Tree() : treeRoot(nullptr), node_cnt(0), max_depth(0) { }
+        Tree() : treeRoot(nullptr), node_cnt(0), max_depth(INITIAL_HT) { }
         // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }  // copy constructor
         // ~Tree() { deleteList(); }
 
         // METHODS =============================================================
 
         //ACESSORS
+        TreeNode<T> root() const {return treeRoot;}
+        int height() const { return max_depth; }
         int size() const { return node_cnt; }
-        bool empty() { return node_cnt == 0; }
-        int height() { return max_depth; }
-        TreeNode<T> root() {return treeRoot;}
-
-
+        bool empty() const { return node_cnt == 0; }
+        
+        
         // MUTATORS
+        void insert(TreeNode<T> * node, T element) {      // element will have to be updated to use keys
+            node->data = element;
+            if(empty()){
+                root = node;
+            }
+            else {
+                TreeNode<T> travelNode = node;
+                while(travelNode != nullptr) {
+                    if (node->data < travelNode-> data) {
+                        if(travelNode->left == )
+                    }
+                }
+            }
+        }
 
         /*
         // TRAVERSAL
