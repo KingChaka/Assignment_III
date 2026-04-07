@@ -52,8 +52,8 @@ class Tree : public TreeNode<T> {
         int height() const { return max_depth; }
         int size() const { return node_cnt; }
         bool empty() const { return node_cnt == 0; }
-        
-        
+
+
         // MUTATORS
         void insert(TreeNode<T> * node, T element) {      // element will have to be updated to use keys
             node->data = element;
