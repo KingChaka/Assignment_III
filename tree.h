@@ -13,11 +13,17 @@ template <typename T>
 class TreeNode {                           // basic node class
 
     public:
-        SNode() : left(NULL), right(NULL) {}
+        bool isRoot;
+        bool isExternal;
+
         TreeNode<T> * parent;
-		TreeNode<T> * left;					// Node is for an Arithmetic Epression (Binary) tree
-		TreeNode<T> * right;
+        TreeNode<T> * left;
+        TreeNode<T> * right;
+
         T data;
+
+        //Constructor
+        TreeNode<T>() : parent(nullptr),left(nullptr),right(nullptr) {}
 };
 #endif // TREENODE_H
 
@@ -28,32 +34,43 @@ class TreeNode {                           // basic node class
 template <typename T>
 class Tree : public TreeNode<T> {
     private:
-        TreeNode<T> * root;
-		int size;
+        TreeNode<T> * treeRoot;
+        int node_cnt;
+        int max_depth;
 
     public:
         // CONSTRUCTORS and DESTRUCTOR
-        Tree() : head(NULL) { }
-        Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }  // copy constructor
-        ~Tree() { deleteList(); }
+        Tree() : treeRoot(nullptr), node_cnt(0), max_depth(0) { }
+        // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }  // copy constructor
+        // ~Tree() { deleteList(); }
 
-        // METHODS
-        bool empty(){ return size == NULL; }                                  // simple getter method
+        // METHODS =============================================================
 
-        bool addElmAtFront(T *inData){                                              // create node make it new head
-            bool isAdded = true;
-            SNode<T> * newHead = new SNode<T>;
-            newHead->data = *inData;
-            newHead->next = head;
-            head = newHead;
-            return isAdded;
+        //ACESSORS
+        int size() const { return node_cnt; }
+        bool empty() { return node_cnt == 0; }
+        int height() { return max_depth; }
+        TreeNode<T> root() {return treeRoot;}
+
+
+        // MUTATORS
+
+        /*
+        // TRAVERSAL
+        int depth (Tree arbor, TreeNode<T> inputNode){
+            if (currentNode.isRoot()) {
+                return 0;
+            } else {
+                return 1 + depth(arbor, inputNode.parent());
+            }
         }
 
-        bool insertElmAtEnd(T * inData){                                            // create node, traverse to tail, add there
-            SNode<T> * currNode = head;
+
+        bool insertElement(T * inData){
+            TreeNode<T> * currNode = root;
 
             // Make a new node
-            SNode<T> * newNode = new SNode<T>;
+            TreeNode<T> * newNode = new TreeNode<T>;
             newNode->data = *inData;
 
             //Add to the tail
@@ -68,21 +85,8 @@ class Tree : public TreeNode<T> {
         }
 
 
-        bool removefromFront(T * inData){                                           // make 2nd node the head, delete previous head
-            bool wasRead = false;
-            if (head == NULL){ }
-            else {
-                wasRead = true;
-                SNode<T> * currNode = head;
-                *inData = currNode->data;
-                head = currNode->next;
-                delete currNode;
-                currNode = NULL;
-            }
-            return wasRead;
-        }
 
-        bool removefromFront(){                                                     // overridde for delete all that doesn't write node data
+        bool removeElement(){                                                     // overridde for delete all that doesn't write node data
             bool wasRead = false;
             if (head == NULL){}
             else {
@@ -95,6 +99,7 @@ class Tree : public TreeNode<T> {
             }
             return wasRead;
         }
+
 
         bool nextElm(T * inData){                                                   // reports what data is in the head node
             bool wasRead = false;
@@ -114,7 +119,7 @@ class Tree : public TreeNode<T> {
                 insertElmAtEnd(&dataCpy);
                 currNode = currNode->next;
             } while( currNode != NULL );
-        }
+        */
 };
 
 #endif // TREE_ADT_H
