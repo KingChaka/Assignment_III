@@ -64,14 +64,14 @@ class Tree : public TreeNode<T> {
                     currNode = currNode->left;
                 } else {
                     currNode = currNode->right;
-                }                                           // end of left-right conditionals
-            }                                               //end of while loop
+                }                                                       // end of left-right conditionals
+            }                                                           //end of while loop
             return nullptr;
         }
 
         // MUTATORS -----------------------------------------------------------
-        void insert(TreeNode<T> * start, T element) {               // element will have to be updated to use keys
-            TreeNode<T> * inNode = new TreeNode<T>;                 //create new node
+        void insert(TreeNode<T> * start, T element) {                   // element will have to be updated to use keys
+            TreeNode<T> * inNode = new TreeNode<T>;                     //create new node
             inNode->data = element;
 
             // FOR EMPTY TREE
@@ -80,22 +80,24 @@ class Tree : public TreeNode<T> {
             // FOR NON-EMPTY TREE
             else {
                 TreeNode<T> * currNode = start;
-                while(currNode != nullptr) {                        // to  travel down to a leaf node.
+                while(currNode != nullptr) {                            // to  travel down to a leaf node.
                     if (inNode->data < currNode->data) {
                         if(currNode->left == nullptr) {
                             currNode->left = inNode;
+                            inNode->parent = currNode;
                             currNode = nullptr; }
-                        else { currNode = currNode->left; }         // closes "move/add to left" operation.
+                        else { currNode = currNode->left; }             // closes "move/add to left" operation.
                     } else {
                         if(currNode->right == nullptr) {
                             currNode->right = inNode;
+                            inNode->parent = currNode;
                             currNode = nullptr; }
-                        else { currNode = currNode->right; }        // closes "move/add to right" operation.
-                    }                       // closes left or right decision
-                }                           // closes the while loop
-            }                               // closes the root / non-root split
+                        else { currNode = currNode->right; }            // closes "move/add to right" operation.
+                    }                                           // closes left or right decision
+                }                                               // closes the while loop
+            }                                                   // closes the root / non-root split
             node_cnt++;
-        }                                   // closes the method
+        }                                                       // closes the method
 
 
 
@@ -104,7 +106,9 @@ class Tree : public TreeNode<T> {
             TreeNode<T> * currNode = search(start, element);
             TreeNode<T> * promotedNode = nullptr;
 
-            if (currNode == nullptr) { return false; }
+            if (currNode == nullptr) {
+                return false;
+                }
 
             // FOR NODES with NO CHILDREN
             if(currNode->left == nullptr && currNode->right == nullptr) {
@@ -120,11 +124,11 @@ class Tree : public TreeNode<T> {
                     currNode->parent->right == nullptr;
                     delete currNode;
                     currNode = nullptr;
-                }       // closes "root-left-right" conditional
-            }           // closes "no children" block
+                }                                                   // closes "root-left-right" conditional
+            }                                                       // closes "no children" block
 
             // For NODES with ONE CHILD
-            else if (currNode->right == nullptr) { //node has left child only
+            else if (currNode->right == nullptr) {                          // node has left child only
                 if( currNode->parent == nullptr ) {
                     treeRoot = currNode->left;
                     delete currNode;
@@ -139,7 +143,7 @@ class Tree : public TreeNode<T> {
                     currNode = nullptr;
                 }
             }
-            else if (currNode->left == nullptr) { //node has right child only
+            else if (currNode->left == nullptr) {                           // node has right child only
                 if( currNode->parent == nullptr ) {
                     treeRoot = currNode->right;
                 } else if ( currNode->parent->left == currNode ) {
@@ -150,12 +154,13 @@ class Tree : public TreeNode<T> {
             }
             // For NODES with TWO CHILDREN
             else {
-                promotedNode = currNode->right;             // select the immediate right child
-                while (promotedNode->left != nullptr) {     // then selects thr left-most leaf
+                promotedNode = currNode->right;                             // select the immediate right child
+                while (promotedNode->left != nullptr) {                     // then selects thr left-most leaf
                     promotedNode = promotedNode->left;
                 }
-                T promotedData = promotedNode->data;        // copies data (not key); So copy both when updated.
-                remove(treeRoot,promotedNode->data);           // removes the node with 0 or 1 child
+                T promotedData = promotedNode->data;                        // copies data (not key); So copy both when updated.
+                remove(treeRoot,promotedNode->data);                        // removes the node with 0 or 1 child
+                node_cnt++;
                 currNode->data = promotedData;
             }
             node_cnt--;
