@@ -61,28 +61,27 @@ class Tree : public TreeNode<T> {
             inNode->data = element;
 
             // FOR EMPTY TREE
-            if(empty()){ treeRoot = inNode;
-            cout << "    DEBUG: empty tree updated" << endl;}       // ends the empty tree condition
+            if(empty()){ treeRoot = inNode; cout << "    DEBUG: root node added" << endl;}
 
             // FOR NON-EMPTY TREE
-            /*
             else {
-                cout << "    DEBUG: populated tree updated" << endl;
-                TreeNode<T> currNode = start;
+                TreeNode<T> * currNode = start;
                 while(currNode != nullptr) {                        // to  travel down to a leaf node.
                     if (inNode->data < currNode->data) {
                         if(currNode->left == nullptr) {
                             currNode->left = inNode;
-                            currNode = nullptr; }
+                            currNode = nullptr;
+                            cout << "    DEBUG: left child added" << endl; }
                         else { currNode = currNode->left; }         // closes "move/add to left" operation.
                     } else {
                         if(currNode->right == nullptr) {
                             currNode->right = inNode;
-                            currNode = nullptr; }
+                            currNode = nullptr;
+                            cout << "    DEBUG: right child added" << endl; }
                         else { currNode = currNode->right; }        // closes "move/add to right" operation.
                     }                       // closes left or right decision
                 }                           // closes the while loop
-            }                               // closes the root / non-root split */
+            }                               // closes the root / non-root split
             node_cnt++;
         }                                   // closes the method
 
