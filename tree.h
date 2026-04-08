@@ -37,7 +37,7 @@ class TreeNode {                           // basic node class for a binary tree
 template <typename T>
 class Tree : public TreeNode<T> {
     private:
-        
+
         int node_cnt;
         int max_depth;
 
@@ -45,7 +45,7 @@ class Tree : public TreeNode<T> {
         // CONSTRUCTORS and DESTRUCTOR
         TreeNode<T> * treeRoot;
         Tree() : node_cnt(0), max_depth(INITIAL_HT),treeRoot(nullptr) { }
-        // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }  // copy constructor
+        // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }   // copy constructor
         // ~Tree() { deleteList(); }
 
         // METHODS =========================================
@@ -56,38 +56,38 @@ class Tree : public TreeNode<T> {
         bool empty() const { return node_cnt == 0; }
 
         // MUTATORS
-        void insert(TreeNode<T> * start, T element) {        // element will have to be updated to use keys
-            TreeNode<T> * inNode = new TreeNode<T>;         //create new node
+        void insert(TreeNode<T> * start, T element) {               // element will have to be updated to use keys
+            TreeNode<T> * inNode = new TreeNode<T>;                 //create new node
             inNode->data = element;
-            
+
             // FOR EMPTY TREE
-            if(empty()){ treeRoot = inNode; 
-            cout << "    DEBUG: empty tree updated" << endl;}                   // ends the empty tree condition
-            
+            if(empty()){ treeRoot = inNode;
+            cout << "    DEBUG: empty tree updated" << endl;}       // ends the empty tree condition
+
             // FOR NON-EMPTY TREE
             /*
-            else {                                          
-                cout << "    DEBUG: 2nd node started" << endl;
-                TreeNode<T> currNode = inNode;
-                while(currNode != nullptr) {                // to  travel down to a leaf node.
+            else {
+                cout << "    DEBUG: populated tree updated" << endl;
+                TreeNode<T> currNode = start;
+                while(currNode != nullptr) {                        // to  travel down to a leaf node.
                     if (inNode->data < currNode->data) {
                         if(currNode->left == nullptr) {
                             currNode->left = inNode;
                             currNode = nullptr; }
-                        else { currNode = currNode->left; } // closes "move/add to left" operation.
+                        else { currNode = currNode->left; }         // closes "move/add to left" operation.
                     } else {
                         if(currNode->right == nullptr) {
                             currNode->right = inNode;
                             currNode = nullptr; }
-                        else { currNode = currNode->right; } // closes "move/add to right" operation.
+                        else { currNode = currNode->right; }        // closes "move/add to right" operation.
                     }                       // closes left or right decision
                 }                           // closes the while loop
             }                               // closes the root / non-root split */
             node_cnt++;
         }                                   // closes the method
 
-        /*
         // TRAVERSAL
+        /*
         int depth (Tree arbor, TreeNode<T> inputNode){
             if (currentNode.isRoot()) {
                 return 0;
@@ -117,7 +117,7 @@ class Tree : public TreeNode<T> {
 
 
 
-        bool removeElement(){                                                     // overridde for delete all that doesn't write node data
+        bool removeElement(){                                   // overridde for delete all that doesn't write node data
             bool wasRead = false;
             if (head == NULL){}
             else {
