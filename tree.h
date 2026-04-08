@@ -35,7 +35,7 @@ class TreeNode {                           // basic node class for a binary tree
 template <typename T>
 class Tree : public TreeNode<T> {
     private:
-        
+
         int node_cnt;
         int max_depth;
 
@@ -56,12 +56,12 @@ class Tree : public TreeNode<T> {
         // MUTATORS
         void insert(TreeNode<T> * inNode, T element) {      // element will have to be updated to use keys
             inNode->data = element;
-            
+
             // FOR EMPTY TREE
             if(empty()){ treeRoot = inNode; }                   // ends the empty tree condition
-            
+
             // FOR NON-EMPTY TREE
-            else {                                          
+            else {
                 TreeNode<T> *currNode = inNode;
                 while(currNode != nullptr) {                // to  travel down to a leaf node.
                     if (inNode->data < currNode->data) {
