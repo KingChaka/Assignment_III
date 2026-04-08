@@ -6,15 +6,15 @@
 *
 ************************************************* */
 #define INITIAL_HT -1
-#include <iostream>    //DEBUG
+#include <iostream>     // FOR DEBUG
 
 #ifndef TREENODE_H
 #define TREENODE_H
 
-using namespace std;  //DEBUG
+using namespace std;    // FOR DEBUG
 
 template <typename T>
-class TreeNode {                           // basic node class for a binary tree
+class TreeNode {
 
     public:
         bool isRoot;
@@ -28,7 +28,7 @@ class TreeNode {                           // basic node class for a binary tree
         //Constructor
         TreeNode<T>() : parent(nullptr),left(nullptr),right(nullptr) {}
 };
-#endif // TREENODE_H
+#endif // TREENODE_H ---------------------------------------
 
 
 #ifndef TREE_ADT_H
@@ -46,22 +46,36 @@ class Tree : public TreeNode<T> {
         TreeNode<T> * treeRoot;
         Tree() : node_cnt(0), max_depth(INITIAL_HT),treeRoot(nullptr) { }
         // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }   // copy constructor
-        // ~Tree() { deleteList(); }
+        ~Tree() { }
 
-        // METHODS =========================================
-        //ACESSORS
+        // METHODS ============================================================
+        // ACESSORS -----------------------------------------------------------
         T root() const {if(treeRoot != nullptr) return treeRoot->data;}
         int height() const { return max_depth; }
         int size() const { return node_cnt; }
         bool empty() const { return node_cnt == 0; }
 
-        // MUTATORS
+        TreeNode<T> * search(TreeNode<T> * start, T element) const {
+            TreeNode<T> * currNode = start;
+            while (currNode != nullptr){
+                if ( element == currNode->data ) {
+                    return currNode;
+                } else if( element < currNode->data ) {
+                    currNode = currNode->left;
+                } else {
+                    currNode = currNode->right;
+                }                                           // end of left-right conditionals
+            }                                               //end of while loop
+            return nullptr;
+        }
+
+        // MUTATORS -----------------------------------------------------------
         void insert(TreeNode<T> * start, T element) {               // element will have to be updated to use keys
             TreeNode<T> * inNode = new TreeNode<T>;                 //create new node
             inNode->data = element;
 
             // FOR EMPTY TREE
-            if(empty()){ treeRoot = inNode; cout << "    DEBUG: root node added" << endl;}
+            if(empty()){ treeRoot = inNode; }
 
             // FOR NON-EMPTY TREE
             else {
@@ -70,14 +84,12 @@ class Tree : public TreeNode<T> {
                     if (inNode->data < currNode->data) {
                         if(currNode->left == nullptr) {
                             currNode->left = inNode;
-                            currNode = nullptr;
-                            cout << "    DEBUG: left child added" << endl; }
+                            currNode = nullptr; }
                         else { currNode = currNode->left; }         // closes "move/add to left" operation.
                     } else {
                         if(currNode->right == nullptr) {
                             currNode->right = inNode;
-                            currNode = nullptr;
-                            cout << "    DEBUG: right child added" << endl; }
+                            currNode = nullptr; }
                         else { currNode = currNode->right; }        // closes "move/add to right" operation.
                     }                       // closes left or right decision
                 }                           // closes the while loop
@@ -85,71 +97,71 @@ class Tree : public TreeNode<T> {
             node_cnt++;
         }                                   // closes the method
 
-        // TRAVERSAL
-        /*
-        int depth (Tree arbor, TreeNode<T> inputNode){
-            if (currentNode.isRoot()) {
-                return 0;
-            } else {
-                return 1 + depth(arbor, inputNode.parent());
-            }
-        }
 
 
-        bool insertElement(T * inData){
-            TreeNode<T> * currNode = root;
+        bool remove(TreeNode<T> * start, T element) {
+            /* removes nodes from the tree */
+            TreeNode<T> * currNode = search(start, element);
+            TreeNode<T> * promotedNode = nullptr;
 
-            // Make a new node
-            TreeNode<T> * newNode = new TreeNode<T>;
-            newNode->data = *inData;
+            if (currNode == nullptr) { return false; }
 
-            //Add to the tail
-            if(head == NULL) head = newNode;
-            else {
-                while(currNode->next != NULL){                  // to the end of the linked list.
-                    currNode = currNode->next;
+            // FOR NODES with NO CHILDREN
+            if(currNode->left == nullptr && currNode->right == nullptr) {
+                if ( currNode->parent == nullptr) {                         // node is root node
+                    treeRoot = nullptr;
+                    delete currNode;
+                    currNode = nullptr;
+                } else if (currNode->parent->left == currNode) {            // node is external left child
+                    currNode->parent->left == nullptr;
+                    delete currNode;
+                    currNode = nullptr;
+                } else {                                                    // node is external right child
+                    currNode->parent->right == nullptr;
+                    delete currNode;
+                    currNode = nullptr;
+                }       // closes "root-left-right" conditional
+            }           // closes "no children" block
+
+            // For NODES with ONE CHILD
+            else if (currNode->right == nullptr) { //node has left child only
+                if( currNode->parent == nullptr ) {
+                    treeRoot = currNode->left;
+                    delete currNode;
+                    currNode = nullptr;
+                } else if ( currNode->parent->left == currNode ) {
+                    currNode->parent->left = currNode->left;
+                    delete currNode;
+                    currNode = nullptr;
+                } else {
+                    currNode->parent->right = currNode->left;
+                    delete currNode;
+                    currNode = nullptr;
                 }
-            currNode->next = newNode;                           // appends to the end of the linked list.
             }
+            else if (currNode->left == nullptr) { //node has right child only
+                if( currNode->parent == nullptr ) {
+                    treeRoot = currNode->right;
+                } else if ( currNode->parent->left == currNode ) {
+                    currNode->parent->left = currNode->right;
+                } else {
+                    currNode->parent->right = currNode->right;
+                }
+            }
+            // For NODES with TWO CHILDREN
+            else {
+                promotedNode = currNode->right;             // select the immediate right child
+                while (promotedNode->left != nullptr) {     // then selects thr left-most leaf
+                    promotedNode = promotedNode->left;
+                }
+                T promotedData = promotedNode->data;        // copies data (not key); So copy both when updated.
+                remove(treeRoot,promotedNode->data);           // removes the node with 0 or 1 child
+                currNode->data = promotedData;
+            }
+            node_cnt--;
             return true;
         }
 
-
-
-        bool removeElement(){                                   // overridde for delete all that doesn't write node data
-            bool wasRead = false;
-            if (head == NULL){}
-            else {
-                wasRead = true;
-                SNode<T> * currNode = head;
-                if(head->next == NULL){ head = NULL;}
-                else { head = head->next; }
-                delete currNode;
-                currNode = NULL;
-            }
-            return wasRead;
-        }
-
-
-        bool nextElm(T * inData){                                                   // reports what data is in the head node
-            bool wasRead = false;
-            if(head == NULL){ }
-            else{ *inData = head->data; }
-            return wasRead;}
-
-        void deleteList(){                                                          // removes all nodes starting from the head end
-            while( head != NULL ) { removefromFront();}
-        }
-
-        void copyList(LinerSinglyLinkedList * targetLL) {                           // copies each node one-by-one into another linked-list
-            SNode<T> * currNode = targetLL->head;
-            T dataCpy;
-            do{
-                dataCpy = currNode->data;
-                insertElmAtEnd(&dataCpy);
-                currNode = currNode->next;
-            } while( currNode != NULL );
-        */
 };
 
 #endif // TREE_ADT_H
