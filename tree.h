@@ -35,11 +35,12 @@ class TreeNode {                           // basic node class for a binary tree
 template <typename T>
 class Tree : public TreeNode<T> {
     private:
-        TreeNode<T> * treeRoot;
+        
         int node_cnt;
         int max_depth;
 
     public:
+        TreeNode<T> * treeRoot;             //DEBUG: change to public
         // CONSTRUCTORS and DESTRUCTOR
         Tree() : treeRoot(nullptr), node_cnt(0), max_depth(INITIAL_HT) { }
         // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }  // copy constructor
@@ -57,11 +58,11 @@ class Tree : public TreeNode<T> {
             inNode->data = element;
             
             // FOR EMPTY TREE
-            if(empty()){ root = inNode; }                   // ends the empty tree condition
+            if(empty()){ treeRoot = inNode; }                   // ends the empty tree condition
             
             // FOR NON-EMPTY TREE
             else {                                          
-                TreeNode<T> currNode = inNode;
+                TreeNode<T> *currNode = inNode;
                 while(currNode != nullptr) {                // to  travel down to a leaf node.
                     if (inNode->data < currNode->data) {
                         if(currNode->left == nullptr) {

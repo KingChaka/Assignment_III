@@ -4,14 +4,13 @@
 int main(void){
     Tree<int> tree;
 
-    std::cout << "Tree exist?  " << tree.empty() << std::endl;
+    std::cout << "Tree empty?  " << tree.empty() << std::endl;
     std::cout << "Tree size:  " << tree.size() << std::endl;
     std::cout << "Tree root:  " << tree.root() << std::endl;
 
-    tree.insert(tree.root(), 5);
-    tree.insert(tree.root(), 7);
+    // tree.insert(tree.treeRoot, 5);
 
-    std::cout << "Tree exist?  " << tree.empty() << std::endl;
+    std::cout << "Tree empty?  " << tree.empty() << std::endl;
     std::cout << "Tree size:  " << tree.size() << std::endl;
     std::cout << "Tree root:  " << tree.root() << std::endl;
 
