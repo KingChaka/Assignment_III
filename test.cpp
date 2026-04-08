@@ -23,12 +23,12 @@ int main(void) {
     std::cout << "Tree root:  "  << tree.root() << std::endl;
     std::cout << std::endl;
 
-    std::cout << "5 is located at:  " << tree.search(tree.treeRoot,5) << endl;
-    std::cout << "4 is located at:  " << tree.search(tree.treeRoot,4) << endl;
-    std::cout << "6 is located at:  " << tree.search(tree.treeRoot,6) << endl;
+    std::cout << "5 is located at:  " << tree.search(tree.treeRoot,5) << std::endl;
+    std::cout << "4 is located at:  " << tree.search(tree.treeRoot,4) << std::endl;
+    std::cout << "6 is located at:  " << tree.search(tree.treeRoot,6) << std::endl;
     std::cout << "5 is deleted." << std::endl;
     tree.remove(tree.treeRoot,5);
-    std::cout << "5 is located at:  " << tree.search(tree.treeRoot,5) << endl;
+    std::cout << "5 is located at:  " << tree.search(tree.treeRoot,5) << std::endl;
     std::cout << std::endl;
 
     std::cout << "Tree empty?  " << tree.empty() << std::endl;

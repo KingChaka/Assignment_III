@@ -6,12 +6,9 @@
 *
 ************************************************* */
 #define INITIAL_HT -1
-#include <iostream>     // FOR DEBUG
 
 #ifndef TREENODE_H
 #define TREENODE_H
-
-using namespace std;    // FOR DEBUG
 
 template <typename T>
 class TreeNode {
@@ -37,22 +34,30 @@ class TreeNode {
 template <typename T>
 class Tree : public TreeNode<T> {
     private:
-
         int node_cnt;
         int max_depth;
 
+        void deleteTree(){
+            while(node_cnt > 0) remove(treeRoot, treeRoot->data);
+        }
+
     public:
-        // CONSTRUCTORS and DESTRUCTOR
+        // CONSTRUCTORS and DESTRUCTOR ----------------------------------------
         TreeNode<T> * treeRoot;
         Tree() : node_cnt(0), max_depth(INITIAL_HT),treeRoot(nullptr) { }
         // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }   // copy constructor
-        ~Tree() { }
+        ~Tree() { deleteTree(); }
 
-        // METHODS ============================================================
         // ACESSORS -----------------------------------------------------------
-        T root() const {if(treeRoot != nullptr) return treeRoot->data;}
+        T root() const {
+            if(treeRoot != nullptr) return treeRoot->data;
+            return T();
+        }
+
         int height() const { return max_depth; }
+
         int size() const { return node_cnt; }
+
         bool empty() const { return node_cnt == 0; }
 
         TreeNode<T> * search(TreeNode<T> * start, T element) const {
@@ -109,7 +114,6 @@ class Tree : public TreeNode<T> {
             if (currNode == nullptr) {
                 return false;
                 }
-
             // FOR NODES with NO CHILDREN
             if(currNode->left == nullptr && currNode->right == nullptr) {
                 if ( currNode->parent == nullptr) {                         // node is root node
@@ -117,16 +121,15 @@ class Tree : public TreeNode<T> {
                     delete currNode;
                     currNode = nullptr;
                 } else if (currNode->parent->left == currNode) {            // node is external left child
-                    currNode->parent->left == nullptr;
+                    currNode->parent->left = nullptr;
                     delete currNode;
                     currNode = nullptr;
                 } else {                                                    // node is external right child
-                    currNode->parent->right == nullptr;
+                    currNode->parent->right = nullptr;
                     delete currNode;
                     currNode = nullptr;
                 }                                                   // closes "root-left-right" conditional
             }                                                       // closes "no children" block
-
             // For NODES with ONE CHILD
             else if (currNode->right == nullptr) {                          // node has left child only
                 if( currNode->parent == nullptr ) {
