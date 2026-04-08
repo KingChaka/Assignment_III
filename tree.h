@@ -11,7 +11,7 @@
 #define TREENODE_H
 
 template <typename T>
-class TreeNode {                           // basic node class
+class TreeNode {                           // basic node class for a binary tree
 
     public:
         bool isRoot;
@@ -45,30 +45,39 @@ class Tree : public TreeNode<T> {
         // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }  // copy constructor
         // ~Tree() { deleteList(); }
 
-        // METHODS =============================================================
-
+        // METHODS =========================================
         //ACESSORS
-        TreeNode<T> root() const {return treeRoot;}
+        TreeNode<T>* root() const {return treeRoot;}
         int height() const { return max_depth; }
         int size() const { return node_cnt; }
         bool empty() const { return node_cnt == 0; }
 
-
         // MUTATORS
-        void insert(TreeNode<T> * node, T element) {      // element will have to be updated to use keys
-            node->data = element;
-            if(empty()){
-                root = node;
-            }
-            else {
-                TreeNode<T> travelNode = node;
-                while(travelNode != nullptr) {
-                    if (node->data < travelNode-> data) {
-                        if(travelNode->left == )
-                    }
-                }
-            }
-        }
+        void insert(TreeNode<T> * inNode, T element) {      // element will have to be updated to use keys
+            inNode->data = element;
+            
+            // FOR EMPTY TREE
+            if(empty()){ root = inNode; }                   // ends the empty tree condition
+            
+            // FOR NON-EMPTY TREE
+            else {                                          
+                TreeNode<T> currNode = inNode;
+                while(currNode != nullptr) {                // to  travel down to a leaf node.
+                    if (inNode->data < currNode->data) {
+                        if(currNode->left == nullptr) {
+                            currNode->left = inNode;
+                            currNode = nullptr; }
+                        else { currNode = currNode->left; } // closes "move/add to left" operation.
+                    } else {
+                        if(currNode->right == nullptr) {
+                            currNode->right = inNode;
+                            currNode = nullptr; }
+                        else { currNode = currNode->right; } // closes "move/add to right" operation.
+                    }                       // closes left or right decision
+                }                           // closes the while loop
+            }                               // closes the root / non-root split
+            node_cnt++;
+        }                                   // closes the method
 
         /*
         // TRAVERSAL
