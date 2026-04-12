@@ -32,7 +32,7 @@ class TreeNode {
 #define TREE_ADT_H
 
 template <typename T>
-class Tree : public TreeNode<T> {
+class Tree : public TreeNode<T> {     //NOTE TO SELF EXPRESSION TREE IS nOT BST TREE FIX THIS
     private:
         int node_cnt;
         int max_depth;
@@ -168,6 +168,25 @@ class Tree : public TreeNode<T> {
             }
             node_cnt--;
             return true;
+        }
+
+
+        void preorderPrint(TreeNode<T>* root) {
+            if (!root) return;
+
+            cout << root->data << " ";
+            preorder(root->left);
+            preorder(root->right);
+        }
+
+
+
+        void postorderPrint(TreeNode<T>* root) {
+            if (!root) return;
+
+            postorder(root->left);
+            postorder(root->right);
+            cout << root->data << " ";
         }
 
 };
