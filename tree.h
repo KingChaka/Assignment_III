@@ -28,11 +28,13 @@ class TreeNode {
 #endif // TREENODE_H ---------------------------------------
 
 
+
+
 #ifndef TREE_ADT_H
 #define TREE_ADT_H
 
 template <typename T>
-class Tree : public TreeNode<T> {     //NOTE TO SELF EXPRESSION TREE IS nOT BST TREE FIX THIS
+class Tree : public TreeNode<T> {
     private:
         int node_cnt;
         int max_depth;
@@ -75,35 +77,34 @@ class Tree : public TreeNode<T> {     //NOTE TO SELF EXPRESSION TREE IS nOT BST 
         }
 
         // MUTATORS -----------------------------------------------------------
-        void insert(TreeNode<T> * start, T element) {                   // element will have to be updated to use keys
-            TreeNode<T> * inNode = new TreeNode<T>;                     //create new node
-            inNode->data = element;
+     
+        
+        bool addLeft(TreeNode<T> * curNode, T element) {                   // element will have to be updated to use keys
+            bool isAdded = false;
+            if(curNode->left == nullptr) {
+                TreeNode<T> * inNode = new TreeNode<T>;                     //create new node and update its info
+                inNode->data = element;
+                inNode->parent = curNode;
+                curNode->left = inNode;
+                isAdded = true;
+                node_cnt++;
+            }
+            return isAdded;    
+        }
 
-            // FOR EMPTY TREE
-            if(empty()){ treeRoot = inNode; }
 
-            // FOR NON-EMPTY TREE
-            else {
-                TreeNode<T> * currNode = start;
-                while(currNode != nullptr) {                            // to  travel down to a leaf node.
-                    if (inNode->data < currNode->data) {
-                        if(currNode->left == nullptr) {
-                            currNode->left = inNode;
-                            inNode->parent = currNode;
-                            currNode = nullptr; }
-                        else { currNode = currNode->left; }             // closes "move/add to left" operation.
-                    } else {
-                        if(currNode->right == nullptr) {
-                            currNode->right = inNode;
-                            inNode->parent = currNode;
-                            currNode = nullptr; }
-                        else { currNode = currNode->right; }            // closes "move/add to right" operation.
-                    }                                           // closes left or right decision
-                }                                               // closes the while loop
-            }                                                   // closes the root / non-root split
-            node_cnt++;
-        }                                                       // closes the method
-
+        bool addRight(TreeNode<T> * curNode, T element) {                   // element will have to be updated to use keys
+            bool isAdded = false;
+            if(curNode->left == nullptr) {
+                TreeNode<T> * inNode = new TreeNode<T>;                     //create new node and update its info
+                inNode->data = element;
+                inNode->parent = curNode;
+                curNode->right = inNode;
+                isAdded = true;
+                node_cnt++;
+            }
+            return isAdded;    
+        }
 
 
         bool remove(TreeNode<T> * start, T element) {
@@ -169,26 +170,7 @@ class Tree : public TreeNode<T> {     //NOTE TO SELF EXPRESSION TREE IS nOT BST 
             node_cnt--;
             return true;
         }
-
-
-        void preorderPrint(TreeNode<T>* root) {
-            if (!root) return;
-
-            cout << root->data << " ";
-            preorder(root->left);
-            preorder(root->right);
-        }
-
-
-
-        void postorderPrint(TreeNode<T>* root) {
-            if (!root) return;
-
-            postorder(root->left);
-            postorder(root->right);
-            cout << root->data << " ";
-        }
-
+        
 };
 
 #endif // TREE_ADT_H
