@@ -1,0 +1,3 @@
+/home/optiplex/Documents/Assignments/build/CMakeFiles/a.dir
+/home/optiplex/Documents/Assignments/build/CMakeFiles/edit_cache.dir
+/home/optiplex/Documents/Assignments/build/CMakeFiles/rebuild_cache.dir
