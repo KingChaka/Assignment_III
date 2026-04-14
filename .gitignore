@@ -7,4 +7,5 @@
 !tree.h
 !expTree.h
 
+!CMakeLists.txt
 !build/Makefile

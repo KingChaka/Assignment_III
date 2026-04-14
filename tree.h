@@ -3,8 +3,8 @@
 *  Assignment: #3 - Tree Traversal for Parenthesized Math Expressions
 *  Purpose: To reinforce and demonstrate a sufficient understanding of
 *           of the tree ADT.
-*
 ************************************************* */
+
 #define INITIAL_HT -1
 
 #ifndef TREENODE_H
@@ -12,7 +12,6 @@
 
 template <typename T>
 class TreeNode {
-
     public:
         bool isRoot;
         bool isExternal;
@@ -46,7 +45,6 @@ class Tree : public TreeNode<T> {
         // CONSTRUCTORS and DESTRUCTOR ----------------------------------------
         TreeNode<T> * treeRoot;
         Tree() : node_cnt(0), max_depth(INITIAL_HT),treeRoot(nullptr) { }
-        // Tree(Tree<T>& lObj) : root(NULL)  { copyList(&lObj); }   // copy constructor
         ~Tree() { deleteTree(); }
 
         // ACESSORS -----------------------------------------------------------
@@ -128,8 +126,8 @@ class Tree : public TreeNode<T> {
                     currNode->parent->right = nullptr;
                     delete currNode;
                     currNode = nullptr;
-                }                                                   // closes "root-left-right" conditional
-            }                                                       // closes "no children" block
+                }                                                           // closes "root-left-right" conditional
+            }                                                               // closes "no children" block
             // For NODES with ONE CHILD
             else if (currNode->right == nullptr) {                          // node has left child only
                 if( currNode->parent == nullptr ) {
