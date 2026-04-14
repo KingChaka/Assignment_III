@@ -8,7 +8,7 @@ int main(void) {
 
     // Pass the pointer treeRoot, not the data tree.root()
     std::cout << "Pre-order: ";
-    tree.preorderPrint(tree.treeRoot); 
+    tree.preorderPrint(tree.treeRoot);
     std::cout << std::endl;
 
     std::cout << "Post-order: ";

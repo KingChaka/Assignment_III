@@ -24,14 +24,14 @@ public:
 
     void storeExpression(const std::string& expr) {
         for (char ch : expr) {
-            if (isspace(ch) || ch == '(') continue; 
-            
+            if (isspace(ch) || ch == '(') continue;
+
             if (isalnum(ch)) {
                 operands.push(createNode(ch));
-            } 
+            }
             else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
                 operators.push(ch);
-            } 
+            }
             else if (ch == ')') {
                 if (operators.empty() || operands.size() < 2) continue;
 

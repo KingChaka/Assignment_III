@@ -1,1 +1,10 @@
-*!Instructions.odt!Instructions.pdf!.gitignore!top.cpp!tree.h!expTree.h!build/build/*!build/Makefile
+*
+!.gitignore
+!Instructions.odt
+!Instructions.pdf
+
+!top.cpp
+!tree.h
+!expTree.h
+
+!build/Makefile

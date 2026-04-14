@@ -77,8 +77,8 @@ class Tree : public TreeNode<T> {
         }
 
         // MUTATORS -----------------------------------------------------------
-     
-        
+
+
         bool addLeft(TreeNode<T> * curNode, T element) {                   // element will have to be updated to use keys
             bool isAdded = false;
             if(curNode->left == nullptr) {
@@ -89,7 +89,7 @@ class Tree : public TreeNode<T> {
                 isAdded = true;
                 node_cnt++;
             }
-            return isAdded;    
+            return isAdded;
         }
 
 
@@ -103,7 +103,7 @@ class Tree : public TreeNode<T> {
                 isAdded = true;
                 node_cnt++;
             }
-            return isAdded;    
+            return isAdded;
         }
 
 
@@ -170,7 +170,7 @@ class Tree : public TreeNode<T> {
             node_cnt--;
             return true;
         }
-        
+
 };
 
 #endif // TREE_ADT_H
