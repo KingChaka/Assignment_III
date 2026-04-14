@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<office:document xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/24.2.7.2$Linux_X86_64 LibreOffice_project/420$Build-2</meta:generator><dc:date>2026-04-13T23:34:10.233263453</dc:date><meta:editing-duration>PT42M11S</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><dc:subject>CS3358 : Data Structures</dc:subject><dc:title>Tree Traversal for Parenthesized Math Expressions</dc:title><dc:creator>Brandon Crenshaw</dc:creator><meta:document-statistic meta:table-count="3" meta:image-count="1" meta:object-count="0" meta:page-count="5" meta:paragraph-count="279" meta:word-count="1339" meta:character-count="12539" meta:non-whitespace-character-count="8007"/></office:meta>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:officeooo="http://openoffice.org/2009/office" office:version="1.4" office:mimetype="application/vnd.oasis.opendocument.text">
+ <office:meta><meta:generator>LibreOffice/25.2.2.2$Windows_X86_64 LibreOffice_project/7370d4be9e3cf6031a51beef54ff3bda878e3fac</meta:generator><dc:date>2026-04-14T14:31:22.589695000</dc:date><meta:editing-duration>PT53M36S</meta:editing-duration><meta:editing-cycles>8</meta:editing-cycles><dc:subject>CS3358 : Data Structures</dc:subject><dc:title>Tree Traversal for Parenthesized Math Expressions</dc:title><meta:print-date>2026-04-14T14:30:26.523470200</meta:print-date><meta:printed-by>PDF files</meta:printed-by><dc:creator>Brandon Crenshaw</dc:creator><meta:document-statistic meta:table-count="4" meta:image-count="2" meta:object-count="0" meta:page-count="6" meta:paragraph-count="326" meta:word-count="1623" meta:character-count="14903" meta:non-whitespace-character-count="9707"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">114097</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="long">961</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">20687</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">19389</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">2</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">36523</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">14665</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">17810</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">128007</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="long">961</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">114097</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">21646</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">133484</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">8737</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">3231</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">2</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">36521</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">14665</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
      <config:config-item config:name="ZoomFactor" config:type="short">110</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="KeepRatio" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="KeepRatio" config:type="boolean">true</config:config-item>
      <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
      <config:config-item config:name="LegacySingleLineFontwork" config:type="boolean">false</config:config-item>
      <config:config-item config:name="ConnectorUseSnapRect" config:type="boolean">false</config:config-item>
@@ -33,116 +33,121 @@
    </config:config-item-map-indexed>
   </config:config-item-set>
   <config:config-item-set config:name="ooo:configuration-settings">
-   <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintPageBackground" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintFaxName" config:type="string"/>
-   <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
-   <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintEmptyPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="NoNumberingShowFollowBy" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="HyphenateURLs" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="ImagePreferredDPI" config:type="int">0</config:config-item>
-   <config:config-item config:name="FootnoteInColumnToPageEnd" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="GutterAtTop" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ContinuousEndnotes" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="FrameAutowidthWithMorePara" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="SubtractFlysAnchoredAtFlys" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="SurroundTextWrapSmall" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="TreatSingleColumnBreakAsPageBreak" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="TabOverSpacing" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="AutoFirstLineIndentDisregardLineSpace" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="TabOverMargin" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintTextPlaceholder" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ApplyTextAttrToEmptyLineAtEndOfParagraph" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedSystemFonts" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="DisableOffPagePositioning" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="BackgroundParaOverDrawings" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="TabOverflow" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AddVerticalFrameOffsets" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ProtectBookmarks" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintBlackFonts" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ApplyParagraphMarkFormatToNumbering" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
-   <config:config-item config:name="JustifyLinesWithShrinking" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RsidRoot" config:type="int">552038</config:config-item>
-   <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
-   <config:config-item config:name="CurrentDatabaseDataSource" config:type="string"/>
-   <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
-   <config:config-item config:name="UnbreakableNumberings" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="CurrentDatabaseCommandType" config:type="int">0</config:config-item>
-   <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PropLineSpacingShrinksFirstLine" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="HeaderSpacingBelowLastPara" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ClippedPictures" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrinterName" config:type="string"/>
-   <config:config-item config:name="AddParaLineSpacingToTableCells" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
-   <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
-   <config:config-item config:name="UseVariableWidthNBSP" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ProtectFields" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
-   <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="UseFormerTextWrapping" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="StylesNoDefault" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="NoGapAfterNoteNumber" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="EmptyDbFieldHidesPara" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="DropCapPunctuation" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
-   <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1057091</config:config-item>
-   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="MsWordCompMinLineHeightByFly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string"/>
+   <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
+   <config:config-item config:name="CurrentDatabaseDataSource" config:type="string"/>
+   <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
+   <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UnbreakableNumberings" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="AddVerticalFrameOffsets" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
+   <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
    <config:config-item config:name="SmallCapsPercentage66" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CurrentDatabaseCommandType" config:type="int">0</config:config-item>
+   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedSystemFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
+   <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="MsWordCompMinLineHeightByFly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="AddParaLineSpacingToTableCells" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseFormerTextWrapping" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
+   <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="NoGapAfterNoteNumber" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IgnoreHiddenCharsForLineCalculation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1152599</config:config-item>
+   <config:config-item config:name="RsidRoot" config:type="int">552038</config:config-item>
+   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="TabOverflow" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="StylesNoDefault" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ClippedPictures" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="BackgroundParaOverDrawings" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmptyDbFieldHidesPara" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="TabOverMargin" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabOverSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TreatSingleColumnBreakAsPageBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SurroundTextWrapSmall" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ApplyParagraphMarkFormatToNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PropLineSpacingShrinksFirstLine" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SubtractFlysAnchoredAtFlys" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DisableOffPagePositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ContinuousEndnotes" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ProtectBookmarks" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ProtectFields" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="HyphenateURLs" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="HeaderSpacingBelowLastPara" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="FrameAutowidthWithMorePara" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="GutterAtTop" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="FootnoteInColumnToPageEnd" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ImagePreferredDPI" config:type="int">0</config:config-item>
+   <config:config-item config:name="AutoFirstLineIndentDisregardLineSpace" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="JustifyLinesWithShrinking" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="NoNumberingShowFollowBy" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DropCapPunctuation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseVariableWidthNBSP" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintBlackFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ApplyTextAttrToEmptyLineAtEndOfParagraph" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ApplyParagraphMarkFormatToEmptyLineAtEndOfParagraph" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PaintHellOverHeaderFooter" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MinRowHeightInclBorder" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MsWordCompGridMetrics" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="NoClippingWithWrapPolygon" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
+   <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintPageBackground" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintTextPlaceholder" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintFaxName" config:type="string"/>
+   <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintEmptyPages" config:type="boolean">false</config:config-item>
   </config:config-item-set>
  </office:settings>
  <office:scripts>
@@ -154,9 +159,6 @@
  </office:scripts>
  <office:font-face-decls>
   <style:font-face style:name="Courier New" svg:font-family="&apos;Courier New&apos;" style:font-family-generic="modern" style:font-pitch="fixed"/>
-  <style:font-face style:name="Droid Sans Mono" svg:font-family="&apos;Droid Sans Mono&apos;, monospace"/>
-  <style:font-face style:name="Liberation Mono" svg:font-family="&apos;Liberation Mono&apos;" style:font-family-generic="modern" style:font-pitch="fixed"/>
-  <style:font-face style:name="Liberation Serif" svg:font-family="&apos;Liberation Serif&apos;" style:font-family-generic="roman"/>
   <style:font-face style:name="Lohit Devanagari" svg:font-family="&apos;Lohit Devanagari&apos;"/>
   <style:font-face style:name="Lohit Devanagari1" svg:font-family="&apos;Lohit Devanagari&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
   <style:font-face style:name="Noto Sans CJK SC" svg:font-family="&apos;Noto Sans CJK SC&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
@@ -166,13 +168,13 @@
  <office:styles>
   <style:default-style style:family="graphic">
    <style:graphic-properties svg:stroke-color="#3465a4" draw:fill-color="#729fcf" fo:wrap-option="no-wrap" draw:shadow-offset-x="0.1181in" draw:shadow-offset-y="0.1181in" draw:start-line-spacing-horizontal="0.1114in" draw:start-line-spacing-vertical="0.1114in" draw:end-line-spacing-horizontal="0.1114in" draw:end-line-spacing-vertical="0.1114in" style:writing-mode="lr-tb" style:flow-with-text="false"/>
-   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" loext:tab-stop-distance="0in" style:font-independent-line-spacing="false">
+   <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" loext:tab-stop-distance="0in" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Times New Roman" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Noto Serif CJK SC" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Lohit Devanagari1" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN"/>
   </style:default-style>
   <style:default-style style:family="paragraph">
-   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="0.4925in" style:writing-mode="page"/>
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" fo:hyphenation-keep="auto" loext:hyphenation-keep-type="column" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="0.4925in" style:writing-mode="page"/>
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Times New Roman" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Noto Serif CJK SC" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Lohit Devanagari1" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
   </style:default-style>
   <style:default-style style:family="table">
@@ -182,7 +184,7 @@
    <style:table-row-properties fo:keep-together="auto"/>
   </style:default-style>
   <style:style style:name="Standard" style:family="paragraph" style:class="text"/>
-  <style:style style:name="Heading" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Text_20_body" style:class="text">
+  <style:style style:name="Heading" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Text_20_body" style:class="chapter">
    <style:paragraph-properties fo:margin-top="0.1665in" fo:margin-bottom="0.0835in" style:contextual-spacing="false" fo:keep-with-next="always"/>
    <style:text-properties style:font-name="Times New Roman" fo:font-family="&apos;Times New Roman&apos;" style:font-family-generic="roman" fo:font-size="14pt" style:font-name-asian="Noto Sans CJK SC" style:font-family-asian="&apos;Noto Sans CJK SC&apos;" style:font-family-generic-asian="system" style:font-pitch-asian="variable" style:font-size-asian="14pt" style:font-name-complex="Lohit Devanagari1" style:font-family-complex="&apos;Lohit Devanagari&apos;" style:font-family-generic-complex="system" style:font-pitch-complex="variable" style:font-size-complex="14pt"/>
   </style:style>
@@ -204,7 +206,7 @@
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="18pt" fo:font-weight="bold" style:font-size-asian="28pt" style:font-weight-asian="bold" style:font-size-complex="28pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="Heading_20_2" style:display-name="Heading 2" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="2" style:class="text">
+  <style:style style:name="Heading_20_2" style:display-name="Heading 2" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="2" style:class="chapter">
    <style:paragraph-properties fo:margin-top="0.139in" fo:margin-bottom="0.0835in" style:contextual-spacing="false"/>
    <style:text-properties fo:font-size="14pt" fo:font-weight="bold" style:font-size-asian="16pt" style:font-weight-asian="bold" style:font-size-complex="16pt" style:font-weight-complex="bold"/>
   </style:style>
@@ -216,13 +218,13 @@
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="OLE" style:family="graphic">
-   <style:graphic-properties text:anchor-type="paragraph" svg:x="0in" svg:y="0in" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph" fo:background-color="transparent" draw:fill="none"/>
+   <style:graphic-properties text:anchor-type="paragraph" svg:x="0in" svg:y="0in" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph" fo:background-color="transparent" draw:fill="none" draw:fill-color="#729fcf"/>
   </style:style>
   <style:style style:name="Formula" style:family="graphic">
-   <style:graphic-properties text:anchor-type="as-char" svg:y="0in" fo:margin-left="0in" fo:margin-right="0in" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="middle" style:vertical-rel="text" fo:background-color="transparent" draw:fill="none" draw:wrap-influence-on-position="once-concurrent" loext:allow-overlap="true"/>
+   <style:graphic-properties text:anchor-type="as-char" svg:y="0in" fo:margin-left="0in" fo:margin-right="0in" style:wrap="parallel" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="middle" style:vertical-rel="text" fo:background-color="transparent" draw:fill="none" draw:fill-color="#729fcf" draw:wrap-influence-on-position="once-concurrent" loext:allow-overlap="true"/>
   </style:style>
   <style:style style:name="Graphics" style:family="graphic">
-   <style:graphic-properties text:anchor-type="paragraph" svg:x="0in" svg:y="0in" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph" draw:fill="none"/>
+   <style:graphic-properties text:anchor-type="paragraph" svg:x="0in" svg:y="0in" style:wrap="dynamic" style:number-wrapped-paragraphs="no-limit" style:wrap-contour="false" style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph" fo:background-color="transparent" draw:fill="none"/>
   </style:style>
   <text:outline-style style:name="Outline">
    <text:outline-level-style text:level="1" loext:num-list-format="%1%" style:num-format="">
@@ -331,29 +333,40 @@
   <style:style style:name="top_5f_cpp.A1" style:display-name="top_cpp.A1" style:family="table-cell">
    <style:table-cell-properties style:writing-mode="page"/>
   </style:style>
+  <style:style style:name="stack" style:family="table">
+   <style:table-properties style:width="7.5in" table:align="margins"/>
+  </style:style>
+  <style:style style:name="stack.A" style:family="table-column">
+   <style:table-column-properties style:column-width="7.5in" style:rel-column-width="65535*"/>
+  </style:style>
+  <style:style style:name="stack.A1" style:family="table-cell">
+   <style:table-cell-properties style:writing-mode="page"/>
+  </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:rsid="000948f4" officeooo:paragraph-rsid="000948f4"/>
-  </style:style>
-  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:rsid="000948f4" officeooo:paragraph-rsid="000a3107"/>
-  </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:rsid="000a3107" officeooo:paragraph-rsid="000a3107"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties officeooo:rsid="000ae198" officeooo:paragraph-rsid="000ae198"/>
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="000948f4" officeooo:paragraph-rsid="000948f4"/>
   </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="000948f4" officeooo:paragraph-rsid="000a3107"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:text-properties officeooo:rsid="000d9a1f" officeooo:paragraph-rsid="000d9a1f"/>
   </style:style>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:rsid="000f8983" officeooo:paragraph-rsid="000f8983"/>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" style:contextual-spacing="false"/>
+   <style:text-properties fo:font-size="10pt" fo:font-weight="bold" officeooo:rsid="000d9a1f" officeooo:paragraph-rsid="000d9a1f" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:rsid="00102143" officeooo:paragraph-rsid="00102143"/>
-  </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties fo:color="#c9211e" loext:opacity="100%" style:font-name="Courier New" fo:font-size="7pt" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
+  </style:style>
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties fo:color="#158466" loext:opacity="100%" style:font-name="Courier New" fo:font-size="7pt" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
+  </style:style>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" style:contextual-spacing="false"/>
+   <style:text-properties fo:font-size="10pt" fo:font-weight="bold" officeooo:rsid="000d9a1f" officeooo:paragraph-rsid="000f8983" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Courier New" fo:font-size="7pt" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
@@ -362,27 +375,22 @@
    <style:text-properties style:font-name="Courier New" fo:font-size="7pt" officeooo:paragraph-rsid="000f8983" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties fo:color="#158466" loext:opacity="100%" style:font-name="Courier New" fo:font-size="7pt" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
+   <style:text-properties fo:color="#ff2492" loext:opacity="100%" fo:font-size="7pt" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
   </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" style:contextual-spacing="false"/>
-   <style:text-properties fo:font-size="10pt" fo:font-weight="bold" officeooo:rsid="000d9a1f" officeooo:paragraph-rsid="000d9a1f" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="000f8983" officeooo:paragraph-rsid="000f8983"/>
   </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" style:contextual-spacing="false"/>
-   <style:text-properties fo:font-size="10pt" fo:font-weight="bold" officeooo:rsid="000d9a1f" officeooo:paragraph-rsid="000f8983" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="00102143" officeooo:paragraph-rsid="00102143"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
-   <style:text-properties style:font-name="Times New Roman"/>
-  </style:style>
-  <style:style style:name="T2" style:family="text">
-   <style:text-properties style:font-name="Liberation Serif"/>
-  </style:style>
-  <style:style style:name="T3" style:family="text">
    <style:text-properties officeooo:rsid="000f8983"/>
   </style:style>
-  <style:style style:name="T4" style:family="text">
+  <style:style style:name="T2" style:family="text">
    <style:text-properties officeooo:rsid="00102143"/>
+  </style:style>
+  <style:style style:name="T3" style:family="text">
+   <style:text-properties officeooo:rsid="00119657"/>
   </style:style>
   <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Graphics">
    <style:graphic-properties style:vertical-pos="top" style:vertical-rel="baseline" style:mirror="none" fo:clip="rect(0in, 0in, 0in, 0in)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
@@ -410,290 +418,290 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
    </text:sequence-decls>
-   <text:p text:style-name="P3"><text:author-name text:fixed="false">Brandon Crenshaw</text:author-name></text:p>
-   <text:p text:style-name="P1"><text:initial-creator/><text:subject>CS3358 : Data Structures</text:subject></text:p>
-   <text:p text:style-name="P2"><text:date style:data-style-name="N10129" text:date-value="2026-04-13T23:34:10.366967450" text:date-adjust="-PT24H00M00S">12- Apr-26</text:date></text:p>
-   <text:p text:style-name="P1"/>
+   <text:p text:style-name="P1"><text:author-name text:fixed="false">Brandon Crenshaw</text:author-name></text:p>
+   <text:p text:style-name="P2"><text:initial-creator/><text:subject>CS3358 : Data Structures</text:subject></text:p>
+   <text:p text:style-name="P3"><text:date style:data-style-name="N10129" text:date-value="2026-04-14T14:31:22.732684467" text:date-adjust="-PT48H00M00S">12- Apr-26</text:date></text:p>
+   <text:p text:style-name="P2"/>
    <text:p text:style-name="Title"><text:title>Tree Traversal for Parenthesized Math Expressions</text:title><text:initial-creator/></text:p>
-   <text:h text:style-name="P5" text:outline-level="2">Code</text:h>
-   <text:p text:style-name="P12">tree.h</text:p>
+   <text:h text:style-name="P4" text:outline-level="2">Code</text:h>
+   <text:p text:style-name="P5">tree.h</text:p>
    <table:table table:name="tree_h" table:style-name="tree_5f_h">
     <table:table-column table:style-name="tree_5f_h.A"/>
     <table:table-row>
      <table:table-cell table:style-name="tree_5f_h.A1" office:value-type="string">
-      <text:p text:style-name="P8">/* *************************************************</text:p>
-      <text:p text:style-name="P8">* <text:s/>Name: Brandon Crenshaw</text:p>
-      <text:p text:style-name="P8">* <text:s/>Assignment: #3 - Tree Traversal for Parenthesized Math Expressions</text:p>
-      <text:p text:style-name="P8">* <text:s/>Purpose: To reinforce and demonstrate a sufficient understanding of</text:p>
-      <text:p text:style-name="P8">* <text:s text:c="10"/>of the tree ADT.</text:p>
-      <text:p text:style-name="P8">************************************************* */</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">#define INITIAL_HT -1</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">#ifndef TREENODE_H</text:p>
-      <text:p text:style-name="P8">#define TREENODE_H</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">template &lt;typename T&gt;</text:p>
-      <text:p text:style-name="P8">class TreeNode {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="4"/>public:</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>bool isRoot;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>bool isExternal;</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>TreeNode&lt;T&gt; * parent;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>TreeNode&lt;T&gt; * left;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>TreeNode&lt;T&gt; * right;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>T data;</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>//Constructor</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>TreeNode&lt;T&gt;() : parent(nullptr),left(nullptr),right(nullptr) {}</text:p>
-      <text:p text:style-name="P8">};</text:p>
-      <text:p text:style-name="P8">#endif // TREENODE_H ---------------------------------------</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">#ifndef TREE_ADT_H</text:p>
-      <text:p text:style-name="P8">#define TREE_ADT_H</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">template &lt;typename T&gt;</text:p>
-      <text:p text:style-name="P8">class Tree : public TreeNode&lt;T&gt; {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="4"/>private:</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>int node_cnt;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>int max_depth;</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>void deleteTree(){</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>while(node_cnt &gt; 0) remove(treeRoot, treeRoot-&gt;data);</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="4"/>public:</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>// CONSTRUCTORS and DESTRUCTOR ----------------------------------------</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>TreeNode&lt;T&gt; * treeRoot;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>Tree() : node_cnt(0), max_depth(INITIAL_HT),treeRoot(nullptr) { }</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>~Tree() { deleteTree(); }</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>// ACESSORS -----------------------------------------------------------</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>T root() const {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>if(treeRoot != nullptr) return treeRoot-&gt;data;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>return T();</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>int height() const { return max_depth; }</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>int size() const { return node_cnt; }</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>bool empty() const { return node_cnt == 0; }</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>TreeNode&lt;T&gt; * search(TreeNode&lt;T&gt; * start, T element) const {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>TreeNode&lt;T&gt; * currNode = start;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>while (currNode != nullptr){</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>if ( element == currNode-&gt;data ) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>return currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else if( element &lt; currNode-&gt;data ) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = currNode-&gt;left;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = currNode-&gt;right;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} <text:s text:c="54"/>// end of left-right conditionals</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>} <text:s text:c="58"/>//end of while loop</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>return nullptr;</text:p>
-      <text:p text:style-name="P8"><text:soft-page-break/><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>// MUTATORS -----------------------------------------------------------</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>bool addLeft(TreeNode&lt;T&gt; * curNode, T element) { <text:s text:c="18"/>// element will have to be updated to use keys</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>bool isAdded = false;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>if(curNode-&gt;left == nullptr) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>TreeNode&lt;T&gt; * inNode = new TreeNode&lt;T&gt;; <text:s text:c="20"/>//create new node and update its info</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>inNode-&gt;data = element;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>inNode-&gt;parent = curNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>curNode-&gt;left = inNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>isAdded = true;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>node_cnt++;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>return isAdded;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>bool addRight(TreeNode&lt;T&gt; * curNode, T element) { <text:s text:c="18"/>// element will have to be updated to use keys</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>bool isAdded = false;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>if(curNode-&gt;left == nullptr) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>TreeNode&lt;T&gt; * inNode = new TreeNode&lt;T&gt;; <text:s text:c="20"/>//create new node and update its info</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>inNode-&gt;data = element;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>inNode-&gt;parent = curNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>curNode-&gt;right = inNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>isAdded = true;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>node_cnt++;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>return isAdded;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="8"/>bool remove(TreeNode&lt;T&gt; * start, T element) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>/* removes nodes from the tree */</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>TreeNode&lt;T&gt; * currNode = search(start, element);</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>TreeNode&lt;T&gt; * promotedNode = nullptr;</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8"><text:s text:c="12"/>if (currNode == nullptr) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>return false;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>// FOR NODES with NO CHILDREN</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>if(currNode-&gt;left == nullptr &amp;&amp; currNode-&gt;right == nullptr) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>if ( currNode-&gt;parent == nullptr) { <text:s text:c="24"/>// node is root node</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>treeRoot = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>delete currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else if (currNode-&gt;parent-&gt;left == currNode) { <text:s text:c="11"/>// node is external left child</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode-&gt;parent-&gt;left = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>delete currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else { <text:s text:c="51"/>// node is external right child</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode-&gt;parent-&gt;right = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>delete currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} <text:s text:c="58"/>// closes &quot;root-left-right&quot; conditional</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>} <text:s text:c="62"/>// closes &quot;no children&quot; block</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>// For NODES with ONE CHILD</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>else if (currNode-&gt;right == nullptr) { <text:s text:c="25"/>// node has left child only</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>if( currNode-&gt;parent == nullptr ) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>treeRoot = currNode-&gt;left;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>delete currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else if ( currNode-&gt;parent-&gt;left == currNode ) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode-&gt;parent-&gt;left = currNode-&gt;left;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>delete currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode-&gt;parent-&gt;right = currNode-&gt;left;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>delete currNode;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode = nullptr;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>else if (currNode-&gt;left == nullptr) { <text:s text:c="26"/>// node has right child only</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>if( currNode-&gt;parent == nullptr ) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>treeRoot = currNode-&gt;right;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else if ( currNode-&gt;parent-&gt;left == currNode ) {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode-&gt;parent-&gt;left = currNode-&gt;right;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>} else {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>currNode-&gt;parent-&gt;right = currNode-&gt;right;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>// For NODES with TWO CHILDREN</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>else {</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>promotedNode = currNode-&gt;right; <text:s text:c="28"/>// select the immediate right child</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>while (promotedNode-&gt;left != nullptr) { <text:s text:c="20"/>// then selects thr left-most leaf</text:p>
-      <text:p text:style-name="P8"><text:s text:c="20"/>promotedNode = promotedNode-&gt;left;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>T promotedData = promotedNode-&gt;data; <text:s text:c="23"/>// copies data (not key); So copy both when updated.</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>remove(treeRoot,promotedNode-&gt;data); <text:s text:c="23"/>// removes the node with 0 or 1 child</text:p>
-      <text:p text:style-name="P8"><text:soft-page-break/><text:s text:c="16"/>node_cnt++;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="16"/>currNode-&gt;data = promotedData;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>node_cnt--;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="12"/>return true;</text:p>
-      <text:p text:style-name="P8"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">};</text:p>
-      <text:p text:style-name="P8"/>
-      <text:p text:style-name="P8">#endif // TREE_ADT_H</text:p>
+      <text:p text:style-name="P6">/* *************************************************</text:p>
+      <text:p text:style-name="P6">* <text:s/>Name: Brandon Crenshaw</text:p>
+      <text:p text:style-name="P6">* <text:s/>Assignment: #3 - Tree Traversal for Parenthesized Math Expressions</text:p>
+      <text:p text:style-name="P6">* <text:s/>Purpose: To reinforce and demonstrate a sufficient understanding of</text:p>
+      <text:p text:style-name="P6">* <text:s text:c="10"/>of the tree ADT.</text:p>
+      <text:p text:style-name="P6">************************************************* */</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">#define INITIAL_HT -1</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">#ifndef TREENODE_H</text:p>
+      <text:p text:style-name="P6">#define TREENODE_H</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">template &lt;typename T&gt;</text:p>
+      <text:p text:style-name="P6">class TreeNode {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="4"/>public:</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>bool isRoot;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>bool isExternal;</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>TreeNode&lt;T&gt; * parent;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>TreeNode&lt;T&gt; * left;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>TreeNode&lt;T&gt; * right;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>T data;</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>//Constructor</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>TreeNode&lt;T&gt;() : parent(nullptr),left(nullptr),right(nullptr) {}</text:p>
+      <text:p text:style-name="P6">};</text:p>
+      <text:p text:style-name="P6">#endif // TREENODE_H ---------------------------------------</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">#ifndef TREE_ADT_H</text:p>
+      <text:p text:style-name="P6">#define TREE_ADT_H</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">template &lt;typename T&gt;</text:p>
+      <text:p text:style-name="P6">class Tree : public TreeNode&lt;T&gt; {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="4"/>private:</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>int node_cnt;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>int max_depth;</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>void deleteTree(){</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>while(node_cnt &gt; 0) remove(treeRoot, treeRoot-&gt;data);</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="4"/>public:</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>// CONSTRUCTORS and DESTRUCTOR ----------------------------------------</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>TreeNode&lt;T&gt; * treeRoot;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>Tree() : node_cnt(0), max_depth(INITIAL_HT),treeRoot(nullptr) { }</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>~Tree() { deleteTree(); }</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>// ACESSORS -----------------------------------------------------------</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>T root() const {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>if(treeRoot != nullptr) return treeRoot-&gt;data;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>return T();</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>int height() const { return max_depth; }</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>int size() const { return node_cnt; }</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>bool empty() const { return node_cnt == 0; }</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>TreeNode&lt;T&gt; * search(TreeNode&lt;T&gt; * start, T element) const {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>TreeNode&lt;T&gt; * currNode = start;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>while (currNode != nullptr){</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>if ( element == currNode-&gt;data ) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>return currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else if( element &lt; currNode-&gt;data ) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = currNode-&gt;left;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = currNode-&gt;right;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} <text:s text:c="54"/>// end of left-right conditionals</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>} <text:s text:c="58"/>//end of while loop</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>return nullptr;</text:p>
+      <text:p text:style-name="P6"><text:soft-page-break/><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>// MUTATORS -----------------------------------------------------------</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>bool addLeft(TreeNode&lt;T&gt; * curNode, T element) { <text:s text:c="18"/>// element will have to be updated to use keys</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>bool isAdded = false;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>if(curNode-&gt;left == nullptr) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>TreeNode&lt;T&gt; * inNode = new TreeNode&lt;T&gt;; <text:s text:c="20"/>//create new node and update its info</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>inNode-&gt;data = element;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>inNode-&gt;parent = curNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>curNode-&gt;left = inNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>isAdded = true;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>node_cnt++;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>return isAdded;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>bool addRight(TreeNode&lt;T&gt; * curNode, T element) { <text:s text:c="18"/>// element will have to be updated to use keys</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>bool isAdded = false;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>if(curNode-&gt;left == nullptr) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>TreeNode&lt;T&gt; * inNode = new TreeNode&lt;T&gt;; <text:s text:c="20"/>//create new node and update its info</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>inNode-&gt;data = element;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>inNode-&gt;parent = curNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>curNode-&gt;right = inNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>isAdded = true;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>node_cnt++;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>return isAdded;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="8"/>bool remove(TreeNode&lt;T&gt; * start, T element) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>/* removes nodes from the tree */</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>TreeNode&lt;T&gt; * currNode = search(start, element);</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>TreeNode&lt;T&gt; * promotedNode = nullptr;</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6"><text:s text:c="12"/>if (currNode == nullptr) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>return false;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>// FOR NODES with NO CHILDREN</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>if(currNode-&gt;left == nullptr &amp;&amp; currNode-&gt;right == nullptr) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>if ( currNode-&gt;parent == nullptr) { <text:s text:c="24"/>// node is root node</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>treeRoot = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>delete currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else if (currNode-&gt;parent-&gt;left == currNode) { <text:s text:c="11"/>// node is external left child</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode-&gt;parent-&gt;left = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>delete currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else { <text:s text:c="51"/>// node is external right child</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode-&gt;parent-&gt;right = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>delete currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} <text:s text:c="58"/>// closes &quot;root-left-right&quot; conditional</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>} <text:s text:c="62"/>// closes &quot;no children&quot; block</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>// For NODES with ONE CHILD</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>else if (currNode-&gt;right == nullptr) { <text:s text:c="25"/>// node has left child only</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>if( currNode-&gt;parent == nullptr ) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>treeRoot = currNode-&gt;left;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>delete currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else if ( currNode-&gt;parent-&gt;left == currNode ) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode-&gt;parent-&gt;left = currNode-&gt;left;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>delete currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode-&gt;parent-&gt;right = currNode-&gt;left;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>delete currNode;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode = nullptr;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>else if (currNode-&gt;left == nullptr) { <text:s text:c="26"/>// node has right child only</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>if( currNode-&gt;parent == nullptr ) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>treeRoot = currNode-&gt;right;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else if ( currNode-&gt;parent-&gt;left == currNode ) {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode-&gt;parent-&gt;left = currNode-&gt;right;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>} else {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>currNode-&gt;parent-&gt;right = currNode-&gt;right;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>// For NODES with TWO CHILDREN</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>else {</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>promotedNode = currNode-&gt;right; <text:s text:c="28"/>// select the immediate right child</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>while (promotedNode-&gt;left != nullptr) { <text:s text:c="20"/>// then selects thr left-most leaf</text:p>
+      <text:p text:style-name="P6"><text:s text:c="20"/>promotedNode = promotedNode-&gt;left;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>T promotedData = promotedNode-&gt;data; <text:s text:c="23"/>// copies data (not key); So copy both when updated.</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>remove(treeRoot,promotedNode-&gt;data); <text:s text:c="23"/>// removes the node with 0 or 1 child</text:p>
+      <text:p text:style-name="P6"><text:soft-page-break/><text:s text:c="16"/>node_cnt++;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="16"/>currNode-&gt;data = promotedData;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>node_cnt--;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="12"/>return true;</text:p>
+      <text:p text:style-name="P6"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">};</text:p>
+      <text:p text:style-name="P6"/>
+      <text:p text:style-name="P6">#endif // TREE_ADT_H</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="Standard"/>
-   <text:p text:style-name="P12">expTree.<text:span text:style-name="T3">h</text:span></text:p>
+   <text:p text:style-name="P5">expTree.<text:span text:style-name="T1">h</text:span></text:p>
    <table:table table:name="expTree_h" table:style-name="expTree_5f_h">
     <table:table-column table:style-name="expTree_5f_h.A"/>
     <table:table-row>
      <table:table-cell table:style-name="expTree_5f_h.A1" office:value-type="string">
-      <text:p text:style-name="P11">/* *************************************************</text:p>
-      <text:p text:style-name="P11">* <text:s/>Name: Brandon Crenshaw</text:p>
-      <text:p text:style-name="P11">* <text:s/>Assignment: #3 - Tree Traversal for Parenthesized Math Expressions</text:p>
-      <text:p text:style-name="P11">* <text:s/>Purpose: To reinforce and demonstrate a sufficient understanding of</text:p>
-      <text:p text:style-name="P11">* <text:s text:c="10"/>of the tree ADT.</text:p>
-      <text:p text:style-name="P11">************************************************* */</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11">#include &lt;iostream&gt;</text:p>
-      <text:p text:style-name="P11">#include &lt;stack&gt;</text:p>
-      <text:p text:style-name="P11">#include &lt;string&gt;</text:p>
-      <text:p text:style-name="P11">#include &lt;cctype&gt; <text:s text:c="42"/>// for isalnum()</text:p>
-      <text:p text:style-name="P11">#include &quot;tree.h&quot;</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11">#ifndef EXP_TREE_H</text:p>
-      <text:p text:style-name="P11">#define EXP_TREE_H</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11">template &lt;typename T&gt;</text:p>
-      <text:p text:style-name="P11">class ExpTree : public Tree&lt;T&gt; {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="4"/>public:</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>// MEMBER VARIABLES ------------------------------------</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>std::stack&lt;TreeNode&lt;T&gt;*&gt; operands;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>std::stack&lt;char&gt; operators;</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="8"/>// CONSTRUCTOR &amp; DECONSTRUCTOR -------------------------</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>ExpTree() { } <text:s text:c="42"/>// Nothing added. Leans on the tree (base) class</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>~ExpTree() { } <text:s text:c="41"/>// Nothing added. Leans on the tree (base) class</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="8"/>// METHODS --------------------------------------------</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>TreeNode&lt;T&gt;* createNode(T val) {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>/* Function to create new nodes*/ <text:s text:c="18"/>// Easier b/c unlike BSTs, expression</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>TreeNode&lt;T&gt;* node = new TreeNode&lt;T&gt;; <text:s text:c="15"/>// trees require alot manipulation (IMHO)</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>node-&gt;data = val;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>return node;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="8"/>void storeExpression(const std::string&amp; expr) {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>/* Takes the expression string and puts into tree form*/</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>for (char ch : expr) {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>if (isspace(ch) || ch == &apos;(&apos;) continue;</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="16"/>if (isalnum(ch)) { <text:s text:c="29"/>// disregards punctionation et al.</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>operands.push(createNode(ch));</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>else if (ch == &apos;+&apos; || ch == &apos;-&apos; || ch == &apos;*&apos; || ch == &apos;/&apos;) {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>operators.push(ch); <text:s text:c="24"/>// strictly for operators</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>else if (ch == &apos;)&apos;) {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>// sub-expressions are built here; with operators as parents</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>if (operators.empty() || operands.size() &lt; 2) continue;</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="20"/>TreeNode&lt;T&gt;* pNode = createNode(operators.top());</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>operators.pop();</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="20"/>pNode-&gt;right = operands.top();</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>operands.pop();</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="20"/>pNode-&gt;left = operands.top();</text:p>
-      <text:p text:style-name="P11"><text:s text:c="20"/>operands.pop();</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="20"/>operands.push(pNode);</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>}</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>if (!operands.empty()) { <text:s text:c="23"/>// Ties it all together</text:p>
-      <text:p text:style-name="P11"><text:s text:c="16"/>Tree&lt;T&gt;::treeRoot = operands.top(); <text:s text:c="8"/>// designates root as the root of the tree.</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>}</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="8"/>void preorderPrint(TreeNode&lt;T&gt;* node) {</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>/* prints tree in preorder format */</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>if (!node) return;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>std::cout &lt;&lt; node-&gt;data &lt;&lt; &quot; &quot;;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>preorderPrint(node-&gt;left);</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>preorderPrint(node-&gt;right);</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11"><text:s text:c="8"/>void postorderPrint(TreeNode&lt;T&gt;* node) {</text:p>
-      <text:p text:style-name="P11"><text:soft-page-break/><text:s text:c="12"/>/* prints tree in postorder format */</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>if (!node) return;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>postorderPrint(node-&gt;left);</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>postorderPrint(node-&gt;right);</text:p>
-      <text:p text:style-name="P11"><text:s text:c="12"/>std::cout &lt;&lt; node-&gt;data &lt;&lt; &quot; &quot;;</text:p>
-      <text:p text:style-name="P11"><text:s text:c="8"/>}</text:p>
-      <text:p text:style-name="P11">};</text:p>
-      <text:p text:style-name="P11"/>
-      <text:p text:style-name="P11">#endif</text:p>
+      <text:p text:style-name="P7">/* *************************************************</text:p>
+      <text:p text:style-name="P7">* <text:s/>Name: Brandon Crenshaw</text:p>
+      <text:p text:style-name="P7">* <text:s/>Assignment: #3 - Tree Traversal for Parenthesized Math Expressions</text:p>
+      <text:p text:style-name="P7">* <text:s/>Purpose: To reinforce and demonstrate a sufficient understanding of</text:p>
+      <text:p text:style-name="P7">* <text:s text:c="10"/>of the tree ADT.</text:p>
+      <text:p text:style-name="P7">************************************************* */</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7">#include &lt;iostream&gt;</text:p>
+      <text:p text:style-name="P7">#include &lt;stack&gt;</text:p>
+      <text:p text:style-name="P7">#include &lt;string&gt;</text:p>
+      <text:p text:style-name="P7">#include &lt;cctype&gt; <text:s text:c="42"/>// for isalnum()</text:p>
+      <text:p text:style-name="P7">#include &quot;tree.h&quot;</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7">#ifndef EXP_TREE_H</text:p>
+      <text:p text:style-name="P7">#define EXP_TREE_H</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7">template &lt;typename T&gt;</text:p>
+      <text:p text:style-name="P7">class ExpTree : public Tree&lt;T&gt; {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="4"/>public:</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>// MEMBER VARIABLES ------------------------------------</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>std::stack&lt;TreeNode&lt;T&gt;*&gt; operands;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>std::stack&lt;char&gt; operators;</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="8"/>// CONSTRUCTOR &amp; DECONSTRUCTOR -------------------------</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>ExpTree() { } <text:s text:c="42"/>// Nothing added. Leans on the tree (base) class</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>~ExpTree() { } <text:s text:c="41"/>// Nothing added. Leans on the tree (base) class</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="8"/>// METHODS --------------------------------------------</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>TreeNode&lt;T&gt;* createNode(T val) {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>/* Function to create new nodes*/ <text:s text:c="18"/>// Easier b/c unlike BSTs, expression</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>TreeNode&lt;T&gt;* node = new TreeNode&lt;T&gt;; <text:s text:c="15"/>// trees require alot manipulation (IMHO)</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>node-&gt;data = val;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>return node;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="8"/>void storeExpression(const std::string&amp; expr) {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>/* Takes the expression string and puts into tree form*/</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>for (char ch : expr) {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>if (isspace(ch) || ch == &apos;(&apos;) continue;</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="16"/>if (isalnum(ch)) { <text:s text:c="29"/>// disregards punctionation et al.</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>operands.push(createNode(ch));</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>else if (ch == &apos;+&apos; || ch == &apos;-&apos; || ch == &apos;*&apos; || ch == &apos;/&apos;) {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>operators.push(ch); <text:s text:c="24"/>// strictly for operators</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>else if (ch == &apos;)&apos;) {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>// sub-expressions are built here; with operators as parents</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>if (operators.empty() || operands.size() &lt; 2) continue;</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="20"/>TreeNode&lt;T&gt;* pNode = createNode(operators.top());</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>operators.pop();</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="20"/>pNode-&gt;right = operands.top();</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>operands.pop();</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="20"/>pNode-&gt;left = operands.top();</text:p>
+      <text:p text:style-name="P7"><text:s text:c="20"/>operands.pop();</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="20"/>operands.push(pNode);</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>}</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>if (!operands.empty()) { <text:s text:c="23"/>// Ties it all together</text:p>
+      <text:p text:style-name="P7"><text:s text:c="16"/>Tree&lt;T&gt;::treeRoot = operands.top(); <text:s text:c="8"/>// designates root as the root of the tree.</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>}</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="8"/>void preorderPrint(TreeNode&lt;T&gt;* node) {</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>/* prints tree in preorder format */</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>if (!node) return;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>std::cout &lt;&lt; node-&gt;data &lt;&lt; &quot; &quot;;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>preorderPrint(node-&gt;left);</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>preorderPrint(node-&gt;right);</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7"><text:s text:c="8"/>void postorderPrint(TreeNode&lt;T&gt;* node) {</text:p>
+      <text:p text:style-name="P7"><text:soft-page-break/><text:s text:c="12"/>/* prints tree in postorder format */</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>if (!node) return;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>postorderPrint(node-&gt;left);</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>postorderPrint(node-&gt;right);</text:p>
+      <text:p text:style-name="P7"><text:s text:c="12"/>std::cout &lt;&lt; node-&gt;data &lt;&lt; &quot; &quot;;</text:p>
+      <text:p text:style-name="P7"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P7">};</text:p>
+      <text:p text:style-name="P7"/>
+      <text:p text:style-name="P7">#endif</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P12"/>
-   <text:p text:style-name="P13"><text:span text:style-name="T3">top</text:span>.<text:span text:style-name="T3">cpp</text:span></text:p>
+   <text:p text:style-name="P5"/>
+   <text:p text:style-name="P8"><text:span text:style-name="T1">top</text:span>.<text:span text:style-name="T1">cpp</text:span></text:p>
    <table:table table:name="top_cpp" table:style-name="top_5f_cpp">
     <table:table-column table:style-name="top_5f_cpp.A"/>
     <table:table-row>
@@ -725,7 +733,7 @@
       <text:p text:style-name="P9"><text:s text:c="4"/>/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</text:p>
       <text:p text:style-name="P9"><text:s text:c="4"/>/* Expression take from HW#3 */</text:p>
       <text:p text:style-name="P10"><text:s text:c="4"/>std::string expr2 = &quot;(((5+2)*(2-1))/(((2+9)+((7-2)-1))*8))&quot;;</text:p>
-      <text:p text:style-name="P10"><text:s text:c="4"/>// parenthese<text:span text:style-name="T3">s</text:span> added after &apos;/&apos; because it wasn&apos;t fully parenthesize.</text:p>
+      <text:p text:style-name="P10"><text:s text:c="4"/>// parenthese<text:span text:style-name="T1">s</text:span> added after &apos;/&apos; because it wasn&apos;t fully parenthesize.</text:p>
       <text:p text:style-name="P10"><text:s text:c="4"/></text:p>
       <text:p text:style-name="P10"><text:s text:c="4"/>std::cout &lt;&lt; &quot;Input string: &quot; &lt;&lt; expr2 &lt;&lt; std::endl;</text:p>
       <text:p text:style-name="P9"/>
@@ -741,7 +749,7 @@
       <text:p text:style-name="P9"><text:s text:c="4"/>std::cout &lt;&lt; &quot;\n&quot; &lt;&lt; std::endl;</text:p>
       <text:p text:style-name="P9"/>
       <text:p text:style-name="P9"><text:s text:c="4"/>/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */</text:p>
-      <text:p text:style-name="P9"><text:s text:c="4"/>/* Somet<text:span text:style-name="T3">h</text:span>ing I just made up */</text:p>
+      <text:p text:style-name="P9"><text:s text:c="4"/>/* Somet<text:span text:style-name="T1">h</text:span>ing I just made up */</text:p>
       <text:p text:style-name="P9"><text:s text:c="4"/>std::string expr3 = &quot;(((((((1+2)+3)+4)+5)+6)+7)+8)&quot;;</text:p>
       <text:p text:style-name="P9"><text:s text:c="4"/>std::cout &lt;&lt; &quot;Input string: &quot; &lt;&lt; expr3 &lt;&lt; std::endl;</text:p>
       <text:p text:style-name="P9"/>
@@ -761,8 +769,8 @@
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P13"/>
-   <text:h text:style-name="P5" text:outline-level="2"><text:soft-page-break/>Outputs</text:h>
+   <text:p text:style-name="P8"/>
+   <text:h text:style-name="P4" text:outline-level="2"><text:soft-page-break/>Outputs</text:h>
    <text:p text:style-name="Standard"><draw:frame draw:style-name="fr1" draw:name="Image1" text:anchor-type="as-char" svg:width="7.5in" svg:height="3.0075in" draw:z-index="0"><draw:image draw:mime-type="image/png">
       <office:binary-data>iVBORw0KGgoAAAANSUhEUgAAAwAAAAE0CAYAAACb9VQcAAAgAElEQVR4nOzdfXRT153o/a/t
        I1kg2Vhgy0Dk3koJtUkj2tqEK0ijpJiSOsm1pxMILZDHnqRkEZim5GkfupjwhJuUXFaZZKB0
@@ -1536,18 +1544,621 @@
      </draw:image>
     </draw:frame></text:p>
    <text:p text:style-name="Standard"/>
-   <text:p text:style-name="P6">Stack/Queue Conversion</text:p>
-   <text:p text:style-name="P6"/>
-   <text:p text:style-name="P6"/>
+   <text:h text:style-name="Heading_20_2" text:outline-level="2">Stack/Queue Conversion</text:h>
+   <table:table table:name="stack" table:style-name="stack">
+    <table:table-column table:style-name="stack.A"/>
+    <table:table-row>
+     <table:table-cell table:style-name="stack.A1" office:value-type="string">
+      <text:p text:style-name="P11">void preOrd(const std::string&amp; expr){</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>// Much of this is copied from tree stuff but is stored strings instead of trees/nodes</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::stack&lt;std::string&gt; preStack;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::stack&lt;char&gt; operatorStack;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::string subexp;</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="4"/>for (char entry : expr) {</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>if (isspace(entry) || entry == &apos;(&apos;) continue;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>if (isalnum(entry)) preStack.push(std::string(1, entry)); <text:s text:c="14"/>// string function converts char -&gt; string</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>else if (entry == &apos;+&apos; || entry == &apos;-&apos; || entry == &apos;*&apos; || entry == &apos;/&apos;) operatorStack.push(entry);</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="8"/>else if (entry == &apos;)&apos;) {</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>if (operatorStack.empty() || preStack.size() &lt; 2) continue;</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="12"/>std::string oprtr = std::string(1,operatorStack.top()); <text:s text:c="9"/>// pulling from stacks and building subexpressions</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>operatorStack.pop();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>std::string right = preStack.top();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>preStack.pop();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>std::string left = preStack.top();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>preStack.pop();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>subexp = oprtr + &quot; &quot; + left + &quot; &quot; + right + &quot; &quot;;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>preStack.push(subexp); <text:s text:c="41"/>// Very [censored] important</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>}</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::cout &lt;&lt; subexp &lt;&lt; std::endl;</text:p>
+      <text:p text:style-name="P11">}</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11">void postOrd(const std::string&amp; expr){</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>/* A repeat of the preorder function*/</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::stack&lt;std::string&gt; postStack;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::stack&lt;char&gt; operatorStack;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::string subexp;</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="4"/>for (char entry : expr) {</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>if (isspace(entry) || entry == &apos;(&apos;) continue;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>if (isalnum(entry)) postStack.push(std::string(1, entry));</text:p>
+      <text:p text:style-name="P11"><text:s text:c="8"/>else if (entry == &apos;+&apos; || entry == &apos;-&apos; || entry == &apos;*&apos; || entry == &apos;/&apos;) operatorStack.push(entry);</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="8"/>else if (entry == &apos;)&apos;) {</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>if (operatorStack.empty() || postStack.size() &lt; 2) continue;</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="12"/>std::string oprtr = std::string(1,operatorStack.top());</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>operatorStack.pop();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>std::string right = postStack.top();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>postStack.pop();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>std::string left = postStack.top();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>postStack.pop();</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>subexp = left + &quot; &quot; + right + &quot; &quot; + oprtr; <text:s text:c="10"/>// the order needed to be &quot;post&quot;</text:p>
+      <text:p text:style-name="P11"><text:s text:c="12"/>postStack.push(subexp);</text:p>
+      <text:p text:style-name="P11"/>
+      <text:p text:style-name="P11"><text:s text:c="8"/>}</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>}</text:p>
+      <text:p text:style-name="P11"><text:s text:c="4"/>std::cout &lt;&lt; subexp &lt;&lt; std::endl;</text:p>
+      <text:p text:style-name="P11">}</text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="P12"><text:soft-page-break/></text:p>
+   <text:p text:style-name="P12"/>
+   <text:p text:style-name="P12"><draw:frame draw:style-name="fr1" draw:name="Image2" text:anchor-type="as-char" svg:width="3.4098in" svg:height="2.9in" draw:z-index="1"><draw:image draw:mime-type="image/png">
+      <office:binary-data>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
+      </office:binary-data>
+     </draw:image>
+    </draw:frame></text:p>
+   <text:p text:style-name="P12"/>
    <text:h text:style-name="Heading_20_2" text:outline-level="2">Learning Report</text:h>
-   <text:p text:style-name="P6">The first thing I had to learn was that an expression tree, although a binary tree, is not a binary search tree. I spent so much time working and figuring to make the underlying tree structure a BST-type structure only to realize that I had wasted my time. Note tht the delete node method still remain even they aren&apos;t really needed; it used to de-allocate memory for the destructor.</text:p>
-   <text:p text:style-name="P6"/>
-   <text:p text:style-name="P6">I also learned that stacks/queues are fundamental to these structures. <text:span text:style-name="T4">I could be wrong, but parsing expressions seem to demand them (or some cruder mechanism that implement the same functionality. Much time was dedicated to this task as well.</text:span></text:p>
-   <text:p text:style-name="P6"/>
-   <text:p text:style-name="P7">In general, I learned that I don&apos;t really understand trees <text:s/>that well and that I will need to dedicate a lot of real estate on my exam notes to the topic.</text:p>
-   <text:p text:style-name="P6"/>
-   <text:p text:style-name="P6"/>
-   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P12">The first thing I had to learn was that an expression tree, although a binary tree, is not a binary search tree. I spent so much time working and figuring to make the underlying tree structure a BST-type structure only to realize that I had wasted my time. Note tht the delete node method still remain even they aren&apos;t really needed; it used to de-allocate memory for the destructor.</text:p>
+   <text:p text:style-name="P12"/>
+   <text:p text:style-name="P12">I also learned that stacks/queues are fundamental to these structures. <text:span text:style-name="T2">I could be wrong, but parsing expressions seem to demand them (or some cruder mechanism that implement the same functionality. Much time was dedicated to this task as well.</text:span></text:p>
+   <text:p text:style-name="P12"/>
+   <text:p text:style-name="P13">In general, I learned that I don&apos;t really understand trees that well, <text:span text:style-name="T3">but more than that I really learned that I need a lot of work in the application of stacks. Understanding the latter is more valuable than the former because believing you understand something you do is more detrimental</text:span> <text:span text:style-name="T3">than simple ignorance. Thus</text:span> I will need to dedicate a lot of real estate on my exam notes to <text:span text:style-name="T3">both of </text:span>the<text:span text:style-name="T3">se</text:span> topic<text:span text:style-name="T3">s</text:span>.</text:p>
+   <text:p text:style-name="P12"/>
+   <text:p text:style-name="P12"/>
+   <text:p text:style-name="P12"/>
   </office:text>
  </office:body>
 </office:document>

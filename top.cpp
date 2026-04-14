@@ -7,22 +7,62 @@
 
 #include "expTree.h"                                            // iostream is already included here
 
-
-
 void preOrd(const std::string& expr){
-// https://chatgpt.com/s/t_69de33378bfc81918f9c39c85bde0f42
-    std::stack<char> rands;
-    std::stack<char> rators;
-    for (int i=0; i < expr.size(); i++) {
-        if (isspace(expr[i]) || expr[i] == '(') continue;
-        if (isalnum(expr[i])) rands.push(expr[i]);
-        else if (expr[i] == '+' || expr[i] == '-' || expr[i] == '*' || expr[i] == '/') rators.push(expr[i]);
-        else if (expr[i] == ')') {
-            std::cout << expr[++i] << std::endl;
-            
+    // Much of this is copied from tree stuff but is stored strings instead of trees/nodes
+    std::stack<std::string> preStack;
+    std::stack<char> operatorStack;
+    std::string subexp;
+
+    for (char entry : expr) {
+        if (isspace(entry) || entry == '(') continue;
+        if (isalnum(entry)) preStack.push(std::string(1, entry));               // string function converts char -> string
+        else if (entry == '+' || entry == '-' || entry == '*' || entry == '/') operatorStack.push(entry);
+
+        else if (entry == ')') {
+            if (operatorStack.empty() || preStack.size() < 2) continue;
+
+            std::string oprtr = std::string(1,operatorStack.top());          // pulling from stacks and building subexpressions
+            operatorStack.pop();
+            std::string right = preStack.top();
+            preStack.pop();
+            std::string left = preStack.top();
+            preStack.pop();
+            subexp = oprtr + " " + left + " " + right + " ";
+            preStack.push(subexp);                                          // Very [censored] important
         }
     }
+    std::cout << subexp << std::endl;
 }
+
+void postOrd(const std::string& expr){
+    /* A repeat of the preorder function*/
+    std::stack<std::string> postStack;
+    std::stack<char> operatorStack;
+    std::string subexp;
+
+    for (char entry : expr) {
+        if (isspace(entry) || entry == '(') continue;
+        if (isalnum(entry)) postStack.push(std::string(1, entry));
+        else if (entry == '+' || entry == '-' || entry == '*' || entry == '/') operatorStack.push(entry);
+
+        else if (entry == ')') {
+            if (operatorStack.empty() || postStack.size() < 2) continue;
+
+            std::string oprtr = std::string(1,operatorStack.top());
+            operatorStack.pop();
+            std::string right = postStack.top();
+            postStack.pop();
+            std::string left = postStack.top();
+            postStack.pop();
+            subexp = left + " " + right + " " + oprtr;           // the order needed to be "post"
+            postStack.push(subexp);
+
+        }
+    }
+    std::cout << subexp << std::endl;
+}
+
+
 
 int main(void) {
     std::string expr = "((A+B)/(C-D))";                         // from instructions
@@ -70,6 +110,12 @@ int main(void) {
     std::cout << "Post-order: ";
     tree3.postorderPrint(tree3.treeRoot);
     std::cout << "\n" << std::endl;
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    /* Stack Stuff */
+    std::cout << "Stack-based print outs:"<< std::endl;
+    preOrd(expr3);
+    postOrd(expr3);
 
     return 0;
 }
