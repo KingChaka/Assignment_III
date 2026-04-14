@@ -1,72 +1,72 @@
-#include <iostream>
-#include <stack>
-#include <string>
-#include "tree.h"
-
-
-
 #ifndef EXP_TREE_H
 #define EXP_TREE_H
 
+#include <iostream>
+#include <stack>
+#include <string>
+#include <cctype> // for isalnum
+#include "tree.h"
+
 template <typename T>
 class ExpTree : public Tree<T> {
+public:
+    std::stack<TreeNode<T>*> operands;
+    std::stack<char> operators;
 
-    public:
-        // CONSTRUCTORS and DESTRUCTOR ----------------------------------------
-        ExpTree() { }
-        ~ExpTree() { }
+    ExpTree() { }
 
-        // Members
-        std::stack<TreeNode<char>*> operands;
-        std::stack<char> operators;
-        Tree eTree;
+    // Helper to create a new node easily
+    TreeNode<T>* createNode(T val) {
+        TreeNode<T>* node = new TreeNode<T>;
+        node->data = val;
+        return node;
+    }
 
-        // MUTATOR ------------------------------------------------------------
-        void storeExpression(const string& expr) {
+    void storeExpression(const std::string& expr) {
+        for (char ch : expr) {
+            if (isspace(ch) || ch == '(') continue; 
+            
+            if (isalnum(ch)) {
+                operands.push(createNode(ch));
+            } 
+            else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+                operators.push(ch);
+            } 
+            else if (ch == ')') {
+                if (operators.empty() || operands.size() < 2) continue;
 
-            for (char ch : expr) {
-                if (ch == ' ') continue;            // skip spaces
-                if (ch == '(')  continue;           // skip opening
-                else if (isalnum(ch)) operands.push(createNode(ch));
-                else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') operators.push(ch);
-                // operators are stored
+                TreeNode<T>* pNode = createNode(operators.top());
+                operators.pop();
 
-                else if (ch == ')') {
-                    TreeNode<T> * pNode = new TreeNode<T>;
-                    pNode->data = operators.top();
-                    operators.pop();                            // removes the character from stack
+                pNode->right = operands.top();
+                operands.pop();
 
-                    pNode->right = operands.top();
-                    operands.pop();
+                pNode->left = operands.top();
+                operands.pop();
 
-                    pNode->left  = operands.top();
-                    operands.pop();
-
-                    operands.push(pNode);
-                }
+                operands.push(pNode);
             }
-            return;
         }
-
-        // ACESSORS ----s> t-------------------------------------------------------
-        
-        void preorderPrint(TreeNode<T>* root) {
-            if (!root) return;
-
-            std::cout << root->data << " ";
-            preorder(root->left);
-            preorder(root->right);
+        // CRITICAL: Set the base class treeRoot to the final operand
+        if (!operands.empty()) {
+            this->treeRoot = operands.top();
         }
+    }
 
-        void postorderPrint(TreeNode<T>* root) {
-            if (!root) return;
+    // Fixed recursion: call the same function name
+    void preorderPrint(TreeNode<T>* node) {
+        if (!node) return;
+        std::cout << node->data << " ";
+        preorderPrint(node->left);
+        preorderPrint(node->right);
+    }
 
-            postorder(root->left);
-            postorder(root->right);
-            std::cout << root->data << " ";
-        }
-
-
+    void postorderPrint(TreeNode<T>* node) {
+        if (!node) return;
+        postorderPrint(node->left);
+        postorderPrint(node->right);
+        std::cout << node->data << " ";
+    }
 };
 
-#endif // EXP_TREE_H
+#endif
